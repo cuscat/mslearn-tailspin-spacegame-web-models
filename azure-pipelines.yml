@@ -35,6 +35,12 @@ steps:
     minorVersion: '0'
     patchVersion: '0'
  
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'tailspinSpaceGame'
+
+
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
